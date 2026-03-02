@@ -10,17 +10,20 @@ type PieChartProps = {
 
 const MARGIN = 30;
 
-export function PieChart({ tags, width, height, data }: PieChartProps) {
+export function PieChart({
+  tags, width, height, data,
+}: PieChartProps) {
   const radius = Math.min(width, height) / 2 - MARGIN;
 
   const pie = useMemo(() => {
-    const pieGenerator = d3.pie<any, number>().value((d: any) => d);
+    // eslint-disable-next-line react-hooks/exhaustive-deps, @typescript-eslint/no-explicit-any
+    const pieGenerator = d3.pie<any, number>().value((d) => d);
     return pieGenerator(data);
   }, [data]);
 
   const arcs = useMemo(() => {
     const arcPathGenerator = d3.arc();
-    return pie.map((p: any) => ({
+    return pie.map((p) => ({
       path: arcPathGenerator({
         innerRadius: 0,
         outerRadius: radius,
@@ -39,26 +42,24 @@ export function PieChart({ tags, width, height, data }: PieChartProps) {
   return (
     <svg width={width} height={height} style={{ display: 'inline-block' }}>
       <g transform={`translate(${width / 2}, ${height / 2})`}>
-        {arcs.map((arc, i) => {
-          return (
-            <>
-              {tags.indexOf(i) >= 0 && (
-                <circle
-                  r={3}
-                  transform={'translate(' + arc.cen + ')'}
-                  fill={'black'}
-                />
-              )}
-              <path
-                key={i}
-                d={arc.path ?? ''}
-                strokeWidth={2}
-                stroke='black'
-                fill='none'
+        {arcs.map((arc, i) => (
+          <>
+            {tags.indexOf(i) >= 0 && (
+              <circle
+                r={3}
+                transform={`translate(${arc.cen})`}
+                fill="black"
               />
-            </>
-          );
-        })}
+            )}
+            <path
+              key={i}
+              d={arc.path ?? ''}
+              strokeWidth={2}
+              stroke="black"
+              fill="none"
+            />
+          </>
+        ))}
       </g>
     </svg>
   );

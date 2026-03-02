@@ -5,7 +5,9 @@ type BarplotProps = {
   data: number[];
 };
 
-export function SquareAreas({ tags, width, height, data }: BarplotProps) {
+export function SquareAreas({
+  tags, width, height, data,
+}: BarplotProps) {
   return (
     <svg
       width={width * data.length}
@@ -21,14 +23,16 @@ export function SquareAreas({ tags, width, height, data }: BarplotProps) {
           <g key={i}>
             <rect
               strokeWidth={2}
-              stroke='black'
-              fill='none'
+              stroke="black"
+              fill="none"
               width={w}
               height={w}
               x={cx - w / 2}
               y={cy - w / 2}
             />
-            ({tags.indexOf(i) >= 0 && <circle r={3} cy={cy} cx={cx} />})
+            (
+            {tags.indexOf(i) >= 0 && <circle r={3} cy={cy} cx={cx} />}
+            )
           </g>
         );
       })}

@@ -7,8 +7,10 @@ type BarplotProps = {
   data: number[];
 };
 
-export function BarChart({ tags, width, height, data }: BarplotProps) {
-  var x = d3
+export function BarChart({
+  tags, width, height, data,
+}: BarplotProps) {
+  const x = d3
     .scaleBand()
     .range([0, width])
     .domain(data.map((_: number, i: number) => i.toString()))
@@ -24,15 +26,15 @@ export function BarChart({ tags, width, height, data }: BarplotProps) {
               r={3}
               cx={x.bandwidth() / 2 + (x(i.toString()) ?? 0)}
               cy={height - height * d - 10}
-              fill={'black'}
+              fill="black"
             />
           )}
           )
           <rect
             // fill={colors[i]}
             strokeWidth={2}
-            stroke='black'
-            fill='none'
+            stroke="black"
+            fill="none"
             y={height - height * d}
             x={x(i.toString())}
             width={x.bandwidth()}

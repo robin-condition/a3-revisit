@@ -1,7 +1,7 @@
-import {CirclesAreas} from './components/CirclesAreas';
+import { CirclesAreas } from './components/CirclesAreas';
 
 function WrappedCirclesAreas({ parameters }: {parameters: {data: number[], tags: [number, number]}}) {
-  return <CirclesAreas data={parameters.data} tags={parameters.tags} width={400} height={200}/>;
+  return <CirclesAreas data={parameters.data} tags={parameters.tags} width={400} height={200} />;
 }
 
 export default WrappedCirclesAreas;

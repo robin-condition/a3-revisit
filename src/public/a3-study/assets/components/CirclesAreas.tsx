@@ -5,7 +5,9 @@ type BarplotProps = {
   data: number[];
 };
 
-export function CirclesAreas({ tags, width, height, data }: BarplotProps) {
+export function CirclesAreas({
+  tags, width, height, data,
+}: BarplotProps) {
   return (
     <svg
       width={width * data.length}
@@ -17,8 +19,8 @@ export function CirclesAreas({ tags, width, height, data }: BarplotProps) {
           <circle
             r={(Math.sqrt(d / Math.PI) * height) / 2}
             strokeWidth={2}
-            stroke='black'
-            fill='none'
+            stroke="black"
+            fill="none"
             cy={height / 2}
             cx={height / 2 + i * (height / 2)}
           />

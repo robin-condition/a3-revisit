@@ -10,8 +10,10 @@ type BarplotProps = {
 
 const padding = 0.2;
 
-export function SquareColor({ fn, tags, width, height, data }: BarplotProps) {
-  var x = d3
+export function SquareColor({
+  fn, tags, width, height, data,
+}: BarplotProps) {
+  const x = d3
     .scaleBand()
     .range([0, width])
     .domain(data.map((_: number, i: number) => i.toString()))
@@ -25,15 +27,15 @@ export function SquareColor({ fn, tags, width, height, data }: BarplotProps) {
     >
       <rect
         fill={fn(0)}
-        y={0}
+        y={padding}
         x={0}
         width={x.bandwidth()}
         height={height / 2}
       />
       <rect
         fill={fn(1)}
-        y={height / 2}
         x={0}
+        y={-padding + height / 2}
         width={x.bandwidth()}
         height={height / 2}
       />
@@ -51,13 +53,13 @@ export function SquareColor({ fn, tags, width, height, data }: BarplotProps) {
             <circle
               cy={height / 2}
               cx={
-                x.bandwidth() +
-                padding +
-                x.bandwidth() / 2 +
-                (x(i.toString()) ?? 0)
+                x.bandwidth()
+                + padding
+                + x.bandwidth() / 2
+                + (x(i.toString()) ?? 0)
               }
               r={3}
-              fill={'black'}
+              fill="black"
             />
           )}
           )
