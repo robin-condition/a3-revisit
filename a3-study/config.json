@@ -22,6 +22,63 @@
         "autoDownloadStudy": false,
         "withSidebar": true
     },
+    "baseComponents": {
+        "bar-chart": {
+            "type": "react-component",
+            "path": "a3-study/assets/WrappedBarChart.tsx",
+            "response": [
+                {
+                    "id": "bar-chart-resp",
+                    "prompt": "Of the two marked bars, what proportion is the smaller bar of the larger bar?",
+                    "type": "numerical"
+                }
+            ]
+        },
+        "circ-areas": {
+            "type": "react-component",
+            "path": "a3-study/assets/WrappedCirclesAreas.tsx",
+            "response": [
+                {
+                    "id": "circle-areas-resp",
+                    "prompt": "Of the two marked circles, what proportion is the smaller circle of the larger circle by area?",
+                    "type": "numerical"
+                }
+            ]
+        },
+        "pie-areas": {
+            "type": "react-component",
+            "path": "a3-study/assets/WrappedPieChart.tsx",
+            "response": [
+                {
+                    "id": "pie-areas-resp",
+                    "prompt": "Of the two marked pie slices, what proportion is the smaller slice of the larger slice by area?",
+                    "type": "numerical"
+                }
+            ]
+        },
+        "square-areas": {
+            "type": "react-component",
+            "path": "a3-study/assets/WrappedSquareAreas.tsx",
+            "response": [
+                {
+                    "id": "square-areas-resp",
+                    "prompt": "Of the two marked squares, what proportion is the smaller square of the larger square by area?",
+                    "type": "numerical"
+                }
+            ]
+        },
+        "square-colors": {
+            "type": "react-component",
+            "path": "a3-study/assets/WrappedSquareColors.tsx",
+            "response": [
+                {
+                    "id": "square-colors-resp",
+                    "prompt": "Of the two marked squares, what proportion is the less-saturated square of the more-saturated square by saturation? No saturation and full saturation are shown to the left for comparison.",
+                    "type": "numerical"
+                }
+            ]
+        }
+    },
     "components": {
         "introduction": {
             "type": "markdown",
@@ -64,12 +121,52 @@
                     "numItems": 5
                 }
             ]
+        },
+        "my-bar-chart": {
+            "baseComponent": "bar-chart",
+            "parameters": {
+                "data": [0.4, 0.3, 0.2, 0.1],
+                "tags": [1, 2]
+            }
+        },
+        "my-circ-chart": {
+            "baseComponent": "circ-areas",
+            "parameters": {
+                "data": [0.4, 0.3, 0.2, 0.1],
+                "tags": [1, 2]
+            }
+        },
+        "my-squarea-chart": {
+            "baseComponent": "square-areas",
+            "parameters": {
+                "data": [0.4, 0.3, 0.2, 0.1],
+                "tags": [1, 2]
+            }
+        },
+        "my-pie-chart": {
+            "baseComponent": "pie-areas",
+            "parameters": {
+                "data": [0.4, 0.3, 0.2, 0.1],
+                "tags": [1, 2]
+            }
+        },
+        "my-square-colors-chart": {
+            "baseComponent": "square-colors",
+            "parameters": {
+                "data": [0.4, 0.3, 0.2, 0.1],
+                "tags": [1, 2]
+            }
         }
     },
     "sequence": {
         "order": "fixed",
         "components": [
             "introduction",
+                        "my-bar-chart",
+                        "my-circ-chart",
+                        "my-squarea-chart",
+                        "my-square-colors-chart",
+                        "my-pie-chart",
             "first-question-set",
             "second-question-set"
         ]
