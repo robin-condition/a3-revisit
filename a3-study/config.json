@@ -90,47 +90,15 @@
             "path": "a3-study/assets/introduction.md",
             "response": []
         },
+        "outro": {
+            "type": "markdown",
+            "path": "a3-study/assets/outro.md",
+            "response": []
+        },
         "main-study-intro": {
             "type": "markdown",
             "path": "a3-study/assets/mainintro.md",
             "response": []
-        },
-        "first-question-set": {
-            "type": "questionnaire",
-            "response": [
-                {
-                    "id": "q1-name",
-                    "prompt": "What is your first name?",
-                    "required": true,
-                    "location": "aboveStimulus",
-                    "type": "longText",
-                    "placeholder": "Please enter your first name"
-                },
-                {
-                    "id": "q2-color",
-                    "prompt": "What is your favorite color?",
-                    "required": true,
-                    "location": "aboveStimulus",
-                    "type": "dropdown",
-                    "placeholder": "Please choose your favorite color",
-                    "options": ["Red", "Blue", "My favorite color is not shown here."]
-                }
-            ]
-        },
-        "second-question-set": {
-            "type": "questionnaire",
-            "response": [
-                {
-                    "id": "q3-satisfaction",
-                    "prompt": "Rate your satisfaction with this survey from 1 (not enjoyable) to 5 (very enjoyable).",
-                    "required": true,
-                    "location": "aboveStimulus",
-                    "type": "likert",
-                    "leftLabel": "Not Enjoyable",
-                    "rightLabel": "Very Enjoyable",
-                    "numItems": 5
-                }
-            ]
         },
         "training-bar-chart": {
             "baseComponent": "bar-chart",
@@ -234,8 +202,7 @@
                 "order": "random",
                 "components": ["chart-square-areas0", "chart-bar-chart0", "chart-square-colors0", "chart-circ-areas0", "chart-pie-areas0", "chart-square-areas1", "chart-bar-chart1", "chart-square-colors1", "chart-circ-areas1", "chart-pie-areas1", "chart-square-areas2", "chart-bar-chart2", "chart-square-colors2", "chart-circ-areas2", "chart-pie-areas2", "chart-square-areas3", "chart-bar-chart3", "chart-square-colors3", "chart-circ-areas3", "chart-pie-areas3", "chart-square-areas4", "chart-bar-chart4", "chart-square-colors4", "chart-circ-areas4", "chart-pie-areas4", "chart-square-areas5", "chart-bar-chart5", "chart-square-colors5", "chart-circ-areas5", "chart-pie-areas5", "chart-square-areas6", "chart-bar-chart6", "chart-square-colors6", "chart-circ-areas6", "chart-pie-areas6", "chart-square-areas7", "chart-bar-chart7", "chart-square-colors7", "chart-circ-areas7", "chart-pie-areas7", "chart-square-areas8", "chart-bar-chart8", "chart-square-colors8", "chart-circ-areas8", "chart-pie-areas8", "chart-square-areas9", "chart-bar-chart9", "chart-square-colors9", "chart-circ-areas9", "chart-pie-areas9", "chart-square-areas10", "chart-bar-chart10", "chart-square-colors10", "chart-circ-areas10", "chart-pie-areas10", "chart-square-areas11", "chart-bar-chart11", "chart-square-colors11", "chart-circ-areas11", "chart-pie-areas11", "chart-square-areas12", "chart-bar-chart12", "chart-square-colors12", "chart-circ-areas12", "chart-pie-areas12", "chart-square-areas13", "chart-bar-chart13", "chart-square-colors13", "chart-circ-areas13", "chart-pie-areas13", "chart-square-areas14", "chart-bar-chart14", "chart-square-colors14", "chart-circ-areas14", "chart-pie-areas14", "chart-square-areas15", "chart-bar-chart15", "chart-square-colors15", "chart-circ-areas15", "chart-pie-areas15", "chart-square-areas16", "chart-bar-chart16", "chart-square-colors16", "chart-circ-areas16", "chart-pie-areas16", "chart-square-areas17", "chart-bar-chart17", "chart-square-colors17", "chart-circ-areas17", "chart-pie-areas17", "chart-square-areas18", "chart-bar-chart18", "chart-square-colors18", "chart-circ-areas18", "chart-pie-areas18", "chart-square-areas19", "chart-bar-chart19", "chart-square-colors19", "chart-circ-areas19", "chart-pie-areas19"]
             },
-            "first-question-set",
-            "second-question-set"
+            "outro"
         ]
     }
 }
