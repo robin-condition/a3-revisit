@@ -1,8 +1,9 @@
-# Hello!
+# Welcome!
 
 In this study, you will be asked to compare quantities with several different visual representations.
 
-On the next page, you will see an example
+Over the next five pages, you will see examples of each type of representation you will be asked to assess. You cannot move on from the examples until you correctly enter the exact answer. (Hint: the answers on the examples are all the same clean number.)
 
+Then, you will be asked questions of those forms several times.
 
-https://revisit.dev/docs/getting-started/your-first-study/
+Thank you for your participation.
