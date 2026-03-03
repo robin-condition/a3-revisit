@@ -17,7 +17,7 @@ export function SquareAreas({
       {data.map((d, i) => {
         const cx = height / 2 + i * (height / 2);
         const cy = height / 2;
-        const w = (d * height) / 2;
+        const w = (Math.sqrt(d) * height) / 2;
 
         return (
           <g key={i}>
