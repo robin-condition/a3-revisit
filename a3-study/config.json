@@ -30,7 +30,8 @@
                 {
                     "id": "bar-chart-resp",
                     "prompt": "Of the two marked bars, what proportion is the smaller bar of the larger bar?",
-                    "type": "numerical"
+                    "type": "numerical",
+                    "required": true
                 }
             ]
         },
@@ -41,7 +42,8 @@
                 {
                     "id": "circle-areas-resp",
                     "prompt": "Of the two marked circles, what proportion is the smaller circle of the larger circle by area?",
-                    "type": "numerical"
+                    "type": "numerical",
+                    "required": true
                 }
             ]
         },
@@ -52,7 +54,8 @@
                 {
                     "id": "pie-areas-resp",
                     "prompt": "Of the two marked pie slices, what proportion is the smaller slice of the larger slice by area?",
-                    "type": "numerical"
+                    "type": "numerical",
+                    "required": true
                 }
             ]
         },
@@ -63,7 +66,8 @@
                 {
                     "id": "square-areas-resp",
                     "prompt": "Of the two marked squares, what proportion is the smaller square of the larger square by area?",
-                    "type": "numerical"
+                    "type": "numerical",
+                    "required": true
                 }
             ]
         },
@@ -74,7 +78,8 @@
                 {
                     "id": "square-colors-resp",
                     "prompt": "Of the two marked squares, what proportion is the less-saturated square of the more-saturated square by saturation? No saturation and full saturation are shown to the left for comparison.",
-                    "type": "numerical"
+                    "type": "numerical",
+                    "required": true
                 }
             ]
         }
@@ -122,6 +127,23 @@
                 }
             ]
         },
+        "training-bar-chart": {
+            "baseComponent": "bar-chart",
+            "parameters": {
+                "data": [0.3, 0.4, 0.2, 0.1],
+                "tags": [1, 2]
+            },
+            "correctAnswer": [{
+                "answer": 0.5,
+                "acceptableHigh": 0.4,
+                "acceptableLow": 0.6,
+                "id": "bar-chart-resp"
+            }],
+            "allowFailedTraining": false,
+            "forceCompletion": true,
+            "provideFeedback": true,
+            "trainingAttempts": 1e100
+        },
         "my-bar-chart": {
             "baseComponent": "bar-chart",
             "parameters": {
@@ -156,17 +178,19 @@
                 "data": [0.4, 0.3, 0.2, 0.1],
                 "tags": [1, 2]
             }
-        }
-    },
+        },
+        "chart-square-areas0": {"baseComponent": "square-areas", "parameters": {"data": [0.2, 0.19, 0.19, 0.24, 0.18], "tags": [1, 4]}}, "chart-bar-chart0": {"baseComponent": "bar-chart", "parameters": {"data": [0.2, 0.19, 0.19, 0.24, 0.18], "tags": [3, 0]}}, "chart-square-colors0": {"baseComponent": "square-colors", "parameters": {"data": [0.2, 0.19, 0.19, 0.24, 0.18], "tags": [2, 3]}}, "chart-circ-areas0": {"baseComponent": "circ-areas", "parameters": {"data": [0.2, 0.19, 0.19, 0.24, 0.18], "tags": [3, 4]}}, "chart-pie-areas0": {"baseComponent": "pie-areas", "parameters": {"data": [0.2, 0.19, 0.19, 0.24, 0.18], "tags": [2, 1]}}, "chart-square-areas1": {"baseComponent": "square-areas", "parameters": {"data": [0.23, 0.22, 0.16, 0.2, 0.19], "tags": [1, 4]}}, "chart-bar-chart1": {"baseComponent": "bar-chart", "parameters": {"data": [0.23, 0.22, 0.16, 0.2, 0.19], "tags": [1, 4]}}, "chart-square-colors1": {"baseComponent": "square-colors", "parameters": {"data": [0.23, 0.22, 0.16, 0.2, 0.19], "tags": [0, 2]}}, "chart-circ-areas1": {"baseComponent": "circ-areas", "parameters": {"data": [0.23, 0.22, 0.16, 0.2, 0.19], "tags": [2, 3]}}, "chart-pie-areas1": {"baseComponent": "pie-areas", "parameters": {"data": [0.23, 0.22, 0.16, 0.2, 0.19], "tags": [4, 0]}}, "chart-square-areas2": {"baseComponent": "square-areas", "parameters": {"data": [0.28, 0.22, 0.16, 0.12, 0.22], "tags": [1, 2]}}, "chart-bar-chart2": {"baseComponent": "bar-chart", "parameters": {"data": [0.28, 0.22, 0.16, 0.12, 0.22], "tags": [1, 2]}}, "chart-square-colors2": {"baseComponent": "square-colors", "parameters": {"data": [0.28, 0.22, 0.16, 0.12, 0.22], "tags": [3, 0]}}, "chart-circ-areas2": {"baseComponent": "circ-areas", "parameters": {"data": [0.28, 0.22, 0.16, 0.12, 0.22], "tags": [0, 1]}}, "chart-pie-areas2": {"baseComponent": "pie-areas", "parameters": {"data": [0.28, 0.22, 0.16, 0.12, 0.22], "tags": [0, 4]}}, "chart-square-areas3": {"baseComponent": "square-areas", "parameters": {"data": [0.2, 0.23, 0.17, 0.21, 0.19], "tags": [2, 1]}}, "chart-bar-chart3": {"baseComponent": "bar-chart", "parameters": {"data": [0.2, 0.23, 0.17, 0.21, 0.19], "tags": [4, 1]}}, "chart-square-colors3": {"baseComponent": "square-colors", "parameters": {"data": [0.2, 0.23, 0.17, 0.21, 0.19], "tags": [3, 0]}}, "chart-circ-areas3": {"baseComponent": "circ-areas", "parameters": {"data": [0.2, 0.23, 0.17, 0.21, 0.19], "tags": [4, 3]}}, "chart-pie-areas3": {"baseComponent": "pie-areas", "parameters": {"data": [0.2, 0.23, 0.17, 0.21, 0.19], "tags": [0, 1]}}, "chart-square-areas4": {"baseComponent": "square-areas", "parameters": {"data": [0.16, 0.21, 0.19, 0.22, 0.22], "tags": [0, 2]}}, "chart-bar-chart4": {"baseComponent": "bar-chart", "parameters": {"data": [0.16, 0.21, 0.19, 0.22, 0.22], "tags": [4, 3]}}, "chart-square-colors4": {"baseComponent": "square-colors", "parameters": {"data": [0.16, 0.21, 0.19, 0.22, 0.22], "tags": [1, 0]}}, "chart-circ-areas4": {"baseComponent": "circ-areas", "parameters": {"data": [0.16, 0.21, 0.19, 0.22, 0.22], "tags": [4, 1]}}, "chart-pie-areas4": {"baseComponent": "pie-areas", "parameters": {"data": [0.16, 0.21, 0.19, 0.22, 0.22], "tags": [3, 0]}}, "chart-square-areas5": {"baseComponent": "square-areas", "parameters": {"data": [0.12, 0.18, 0.3, 0.23, 0.17], "tags": [3, 4]}}, "chart-bar-chart5": {"baseComponent": "bar-chart", "parameters": {"data": [0.12, 0.18, 0.3, 0.23, 0.17], "tags": [2, 0]}}, "chart-square-colors5": {"baseComponent": "square-colors", "parameters": {"data": [0.12, 0.18, 0.3, 0.23, 0.17], "tags": [1, 0]}}, "chart-circ-areas5": {"baseComponent": "circ-areas", "parameters": {"data": [0.12, 0.18, 0.3, 0.23, 0.17], "tags": [2, 4]}}, "chart-pie-areas5": {"baseComponent": "pie-areas", "parameters": {"data": [0.12, 0.18, 0.3, 0.23, 0.17], "tags": [2, 4]}}, "chart-square-areas6": {"baseComponent": "square-areas", "parameters": {"data": [0.16, 0.15, 0.21, 0.24, 0.24], "tags": [2, 0]}}, "chart-bar-chart6": {"baseComponent": "bar-chart", "parameters": {"data": [0.16, 0.15, 0.21, 0.24, 0.24], "tags": [0, 1]}}, "chart-square-colors6": {"baseComponent": "square-colors", "parameters": {"data": [0.16, 0.15, 0.21, 0.24, 0.24], "tags": [1, 4]}}, "chart-circ-areas6": {"baseComponent": "circ-areas", "parameters": {"data": [0.16, 0.15, 0.21, 0.24, 0.24], "tags": [2, 3]}}, "chart-pie-areas6": {"baseComponent": "pie-areas", "parameters": {"data": [0.16, 0.15, 0.21, 0.24, 0.24], "tags": [3, 2]}}, "chart-square-areas7": {"baseComponent": "square-areas", "parameters": {"data": [0.19, 0.15, 0.2, 0.31, 0.15], "tags": [2, 1]}}, "chart-bar-chart7": {"baseComponent": "bar-chart", "parameters": {"data": [0.19, 0.15, 0.2, 0.31, 0.15], "tags": [1, 3]}}, "chart-square-colors7": {"baseComponent": "square-colors", "parameters": {"data": [0.19, 0.15, 0.2, 0.31, 0.15], "tags": [4, 1]}}, "chart-circ-areas7": {"baseComponent": "circ-areas", "parameters": {"data": [0.19, 0.15, 0.2, 0.31, 0.15], "tags": [4, 2]}}, "chart-pie-areas7": {"baseComponent": "pie-areas", "parameters": {"data": [0.19, 0.15, 0.2, 0.31, 0.15], "tags": [4, 2]}}, "chart-square-areas8": {"baseComponent": "square-areas", "parameters": {"data": [0.15, 0.2, 0.21, 0.19, 0.25], "tags": [1, 3]}}, "chart-bar-chart8": {"baseComponent": "bar-chart", "parameters": {"data": [0.15, 0.2, 0.21, 0.19, 0.25], "tags": [2, 3]}}, "chart-square-colors8": {"baseComponent": "square-colors", "parameters": {"data": [0.15, 0.2, 0.21, 0.19, 0.25], "tags": [1, 2]}}, "chart-circ-areas8": {"baseComponent": "circ-areas", "parameters": {"data": [0.15, 0.2, 0.21, 0.19, 0.25], "tags": [3, 2]}}, "chart-pie-areas8": {"baseComponent": "pie-areas", "parameters": {"data": [0.15, 0.2, 0.21, 0.19, 0.25], "tags": [4, 1]}}, "chart-square-areas9": {"baseComponent": "square-areas", "parameters": {"data": [0.25, 0.2, 0.22, 0.15, 0.18], "tags": [3, 2]}}, "chart-bar-chart9": {"baseComponent": "bar-chart", "parameters": {"data": [0.25, 0.2, 0.22, 0.15, 0.18], "tags": [1, 3]}}, "chart-square-colors9": {"baseComponent": "square-colors", "parameters": {"data": [0.25, 0.2, 0.22, 0.15, 0.18], "tags": [0, 4]}}, "chart-circ-areas9": {"baseComponent": "circ-areas", "parameters": {"data": [0.25, 0.2, 0.22, 0.15, 0.18], "tags": [0, 1]}}, "chart-pie-areas9": {"baseComponent": "pie-areas", "parameters": {"data": [0.25, 0.2, 0.22, 0.15, 0.18], "tags": [4, 2]}}, "chart-square-areas10": {"baseComponent": "square-areas", "parameters": {"data": [0.16, 0.15, 0.23, 0.29, 0.17], "tags": [0, 3]}}, "chart-bar-chart10": {"baseComponent": "bar-chart", "parameters": {"data": [0.16, 0.15, 0.23, 0.29, 0.17], "tags": [4, 1]}}, "chart-square-colors10": {"baseComponent": "square-colors", "parameters": {"data": [0.16, 0.15, 0.23, 0.29, 0.17], "tags": [3, 2]}}, "chart-circ-areas10": {"baseComponent": "circ-areas", "parameters": {"data": [0.16, 0.15, 0.23, 0.29, 0.17], "tags": [1, 4]}}, "chart-pie-areas10": {"baseComponent": "pie-areas", "parameters": {"data": [0.16, 0.15, 0.23, 0.29, 0.17], "tags": [4, 3]}}, "chart-square-areas11": {"baseComponent": "square-areas", "parameters": {"data": [0.13, 0.26, 0.21, 0.23, 0.17], "tags": [3, 4]}}, "chart-bar-chart11": {"baseComponent": "bar-chart", "parameters": {"data": [0.13, 0.26, 0.21, 0.23, 0.17], "tags": [2, 1]}}, "chart-square-colors11": {"baseComponent": "square-colors", "parameters": {"data": [0.13, 0.26, 0.21, 0.23, 0.17], "tags": [3, 4]}}, "chart-circ-areas11": {"baseComponent": "circ-areas", "parameters": {"data": [0.13, 0.26, 0.21, 0.23, 0.17], "tags": [0, 4]}}, "chart-pie-areas11": {"baseComponent": "pie-areas", "parameters": {"data": [0.13, 0.26, 0.21, 0.23, 0.17], "tags": [3, 4]}}, "chart-square-areas12": {"baseComponent": "square-areas", "parameters": {"data": [0.24, 0.21, 0.22, 0.21, 0.12], "tags": [3, 4]}}, "chart-bar-chart12": {"baseComponent": "bar-chart", "parameters": {"data": [0.24, 0.21, 0.22, 0.21, 0.12], "tags": [0, 1]}}, "chart-square-colors12": {"baseComponent": "square-colors", "parameters": {"data": [0.24, 0.21, 0.22, 0.21, 0.12], "tags": [0, 4]}}, "chart-circ-areas12": {"baseComponent": "circ-areas", "parameters": {"data": [0.24, 0.21, 0.22, 0.21, 0.12], "tags": [0, 3]}}, "chart-pie-areas12": {"baseComponent": "pie-areas", "parameters": {"data": [0.24, 0.21, 0.22, 0.21, 0.12], "tags": [0, 1]}}, "chart-square-areas13": {"baseComponent": "square-areas", "parameters": {"data": [0.18, 0.23, 0.14, 0.22, 0.23], "tags": [0, 1]}}, "chart-bar-chart13": {"baseComponent": "bar-chart", "parameters": {"data": [0.18, 0.23, 0.14, 0.22, 0.23], "tags": [2, 3]}}, "chart-square-colors13": {"baseComponent": "square-colors", "parameters": {"data": [0.18, 0.23, 0.14, 0.22, 0.23], "tags": [3, 0]}}, "chart-circ-areas13": {"baseComponent": "circ-areas", "parameters": {"data": [0.18, 0.23, 0.14, 0.22, 0.23], "tags": [3, 0]}}, "chart-pie-areas13": {"baseComponent": "pie-areas", "parameters": {"data": [0.18, 0.23, 0.14, 0.22, 0.23], "tags": [1, 4]}}, "chart-square-areas14": {"baseComponent": "square-areas", "parameters": {"data": [0.15, 0.19, 0.17, 0.3, 0.19], "tags": [0, 3]}}, "chart-bar-chart14": {"baseComponent": "bar-chart", "parameters": {"data": [0.15, 0.19, 0.17, 0.3, 0.19], "tags": [2, 3]}}, "chart-square-colors14": {"baseComponent": "square-colors", "parameters": {"data": [0.15, 0.19, 0.17, 0.3, 0.19], "tags": [4, 3]}}, "chart-circ-areas14": {"baseComponent": "circ-areas", "parameters": {"data": [0.15, 0.19, 0.17, 0.3, 0.19], "tags": [0, 3]}}, "chart-pie-areas14": {"baseComponent": "pie-areas", "parameters": {"data": [0.15, 0.19, 0.17, 0.3, 0.19], "tags": [2, 3]}}, "chart-square-areas15": {"baseComponent": "square-areas", "parameters": {"data": [0.17, 0.2, 0.21, 0.22, 0.2], "tags": [1, 2]}}, "chart-bar-chart15": {"baseComponent": "bar-chart", "parameters": {"data": [0.17, 0.2, 0.21, 0.22, 0.2], "tags": [2, 4]}}, "chart-square-colors15": {"baseComponent": "square-colors", "parameters": {"data": [0.17, 0.2, 0.21, 0.22, 0.2], "tags": [2, 3]}}, "chart-circ-areas15": {"baseComponent": "circ-areas", "parameters": {"data": [0.17, 0.2, 0.21, 0.22, 0.2], "tags": [1, 0]}}, "chart-pie-areas15": {"baseComponent": "pie-areas", "parameters": {"data": [0.17, 0.2, 0.21, 0.22, 0.2], "tags": [2, 1]}}, "chart-square-areas16": {"baseComponent": "square-areas", "parameters": {"data": [0.21, 0.18, 0.14, 0.29, 0.18], "tags": [0, 3]}}, "chart-bar-chart16": {"baseComponent": "bar-chart", "parameters": {"data": [0.21, 0.18, 0.14, 0.29, 0.18], "tags": [0, 1]}}, "chart-square-colors16": {"baseComponent": "square-colors", "parameters": {"data": [0.21, 0.18, 0.14, 0.29, 0.18], "tags": [4, 1]}}, "chart-circ-areas16": {"baseComponent": "circ-areas", "parameters": {"data": [0.21, 0.18, 0.14, 0.29, 0.18], "tags": [4, 3]}}, "chart-pie-areas16": {"baseComponent": "pie-areas", "parameters": {"data": [0.21, 0.18, 0.14, 0.29, 0.18], "tags": [2, 0]}}, "chart-square-areas17": {"baseComponent": "square-areas", "parameters": {"data": [0.2, 0.2, 0.24, 0.25, 0.11], "tags": [0, 2]}}, "chart-bar-chart17": {"baseComponent": "bar-chart", "parameters": {"data": [0.2, 0.2, 0.24, 0.25, 0.11], "tags": [0, 2]}}, "chart-square-colors17": {"baseComponent": "square-colors", "parameters": {"data": [0.2, 0.2, 0.24, 0.25, 0.11], "tags": [3, 1]}}, "chart-circ-areas17": {"baseComponent": "circ-areas", "parameters": {"data": [0.2, 0.2, 0.24, 0.25, 0.11], "tags": [4, 1]}}, "chart-pie-areas17": {"baseComponent": "pie-areas", "parameters": {"data": [0.2, 0.2, 0.24, 0.25, 0.11], "tags": [1, 4]}}, "chart-square-areas18": {"baseComponent": "square-areas", "parameters": {"data": [0.23, 0.2, 0.18, 0.2, 0.19], "tags": [0, 3]}}, "chart-bar-chart18": {"baseComponent": "bar-chart", "parameters": {"data": [0.23, 0.2, 0.18, 0.2, 0.19], "tags": [2, 0]}}, "chart-square-colors18": {"baseComponent": "square-colors", "parameters": {"data": [0.23, 0.2, 0.18, 0.2, 0.19], "tags": [2, 4]}}, "chart-circ-areas18": {"baseComponent": "circ-areas", "parameters": {"data": [0.23, 0.2, 0.18, 0.2, 0.19], "tags": [2, 4]}}, "chart-pie-areas18": {"baseComponent": "pie-areas", "parameters": {"data": [0.23, 0.2, 0.18, 0.2, 0.19], "tags": [4, 0]}}, "chart-square-areas19": {"baseComponent": "square-areas", "parameters": {"data": [0.18, 0.12, 0.24, 0.28, 0.18], "tags": [4, 3]}}, "chart-bar-chart19": {"baseComponent": "bar-chart", "parameters": {"data": [0.18, 0.12, 0.24, 0.28, 0.18], "tags": [4, 3]}}, "chart-square-colors19": {"baseComponent": "square-colors", "parameters": {"data": [0.18, 0.12, 0.24, 0.28, 0.18], "tags": [3, 0]}}, "chart-circ-areas19": {"baseComponent": "circ-areas", "parameters": {"data": [0.18, 0.12, 0.24, 0.28, 0.18], "tags": [3, 0]}}, "chart-pie-areas19": {"baseComponent": "pie-areas", "parameters": {"data": [0.18, 0.12, 0.24, 0.28, 0.18], "tags": [2, 1]}}
+    }
+    ,
     "sequence": {
         "order": "fixed",
         "components": [
             "introduction",
-                        "my-bar-chart",
-                        "my-circ-chart",
-                        "my-squarea-chart",
-                        "my-square-colors-chart",
-                        "my-pie-chart",
+            "training-bar-chart",
+            {
+                "order": "random",
+                "components": ["chart-square-areas0", "chart-bar-chart0", "chart-square-colors0", "chart-circ-areas0", "chart-pie-areas0", "chart-square-areas1", "chart-bar-chart1", "chart-square-colors1", "chart-circ-areas1", "chart-pie-areas1", "chart-square-areas2", "chart-bar-chart2", "chart-square-colors2", "chart-circ-areas2", "chart-pie-areas2", "chart-square-areas3", "chart-bar-chart3", "chart-square-colors3", "chart-circ-areas3", "chart-pie-areas3", "chart-square-areas4", "chart-bar-chart4", "chart-square-colors4", "chart-circ-areas4", "chart-pie-areas4", "chart-square-areas5", "chart-bar-chart5", "chart-square-colors5", "chart-circ-areas5", "chart-pie-areas5", "chart-square-areas6", "chart-bar-chart6", "chart-square-colors6", "chart-circ-areas6", "chart-pie-areas6", "chart-square-areas7", "chart-bar-chart7", "chart-square-colors7", "chart-circ-areas7", "chart-pie-areas7", "chart-square-areas8", "chart-bar-chart8", "chart-square-colors8", "chart-circ-areas8", "chart-pie-areas8", "chart-square-areas9", "chart-bar-chart9", "chart-square-colors9", "chart-circ-areas9", "chart-pie-areas9", "chart-square-areas10", "chart-bar-chart10", "chart-square-colors10", "chart-circ-areas10", "chart-pie-areas10", "chart-square-areas11", "chart-bar-chart11", "chart-square-colors11", "chart-circ-areas11", "chart-pie-areas11", "chart-square-areas12", "chart-bar-chart12", "chart-square-colors12", "chart-circ-areas12", "chart-pie-areas12", "chart-square-areas13", "chart-bar-chart13", "chart-square-colors13", "chart-circ-areas13", "chart-pie-areas13", "chart-square-areas14", "chart-bar-chart14", "chart-square-colors14", "chart-circ-areas14", "chart-pie-areas14", "chart-square-areas15", "chart-bar-chart15", "chart-square-colors15", "chart-circ-areas15", "chart-pie-areas15", "chart-square-areas16", "chart-bar-chart16", "chart-square-colors16", "chart-circ-areas16", "chart-pie-areas16", "chart-square-areas17", "chart-bar-chart17", "chart-square-colors17", "chart-circ-areas17", "chart-pie-areas17", "chart-square-areas18", "chart-bar-chart18", "chart-square-colors18", "chart-circ-areas18", "chart-pie-areas18", "chart-square-areas19", "chart-bar-chart19", "chart-square-colors19", "chart-circ-areas19", "chart-pie-areas19"]
+            },
             "first-question-set",
             "second-question-set"
         ]
