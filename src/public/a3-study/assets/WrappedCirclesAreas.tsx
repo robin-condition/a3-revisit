@@ -1,4 +1,4 @@
-import { CirclesAreas } from "./components/CirclesAreas";
+import { CirclesAreas } from './components/CirclesAreas';
 
 function WrappedCirclesAreas({
   parameters,
@@ -6,11 +6,10 @@ function WrappedCirclesAreas({
   parameters: { data: number[]; tags: [number, number] };
 }) {
   return (
-    <div style={{ overflow: "scroll" }}>
+    <div style={{ overflow: 'scroll' }}>
       <CirclesAreas
         data={parameters.data}
         tags={parameters.tags}
-        width={400}
         height={200}
       />
     </div>

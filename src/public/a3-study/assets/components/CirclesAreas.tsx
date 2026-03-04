@@ -1,16 +1,17 @@
 type BarplotProps = {
-  width: number;
   height: number;
   tags: [number, number];
   data: number[];
 };
 
-export function CirclesAreas({ tags, width, height, data }: BarplotProps) {
+export function CirclesAreas({
+  tags, height, data,
+}: BarplotProps) {
   return (
     <svg
       width={120 * data.length}
       height={height}
-      style={{ display: "inline-block" }}
+      style={{ display: 'inline-block' }}
     >
       {data.map((d, i) => (
         <>

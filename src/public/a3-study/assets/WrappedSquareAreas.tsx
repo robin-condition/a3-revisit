@@ -1,4 +1,4 @@
-import { SquareAreas } from "./components/SquareAreas";
+import { SquareAreas } from './components/SquareAreas';
 
 function WrappedSquareAreaChart({
   parameters,
@@ -6,10 +6,9 @@ function WrappedSquareAreaChart({
   parameters: { data: number[]; tags: [number, number] };
 }) {
   return (
-    <div style={{ overflow: "scroll" }}>
+    <div style={{ overflow: 'scroll' }}>
       <SquareAreas
         data={parameters.data}
-        width={400}
         height={200}
         tags={parameters.tags}
       />

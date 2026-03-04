@@ -16,7 +16,7 @@ export function PieChart({
   const radius = Math.min(width, height) / 2 - MARGIN;
 
   const pie = useMemo(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps, @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const pieGenerator = d3.pie<any, number>().value((d) => d);
     return pieGenerator(data);
   }, [data]);
