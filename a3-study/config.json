@@ -29,7 +29,7 @@
             "response": [
                 {
                     "id": "bar-chart-resp",
-                    "prompt": "Of the two marked bars, what proportion is the smaller bar of the larger bar?",
+                    "prompt": "Of the two marked bars, what percentage of the larger bar is the smaller bar? (between 0-100)",
                     "type": "numerical",
                     "required": true
                 }
@@ -41,7 +41,7 @@
             "response": [
                 {
                     "id": "circle-areas-resp",
-                    "prompt": "Of the two marked circles, what proportion is the smaller circle of the larger circle by area?",
+                    "prompt": "Of the two marked circles, what percentage of the larger circle is the smaller circle by area? (between 0-100)",
                     "type": "numerical",
                     "required": true
                 }
@@ -53,7 +53,7 @@
             "response": [
                 {
                     "id": "pie-areas-resp",
-                    "prompt": "Of the two marked pie slices, what proportion is the smaller slice of the larger slice by area?",
+                    "prompt": "Of the two marked pie slices, what percentage of the larger slice is the smaller slice by area? (between 0-100)",
                     "type": "numerical",
                     "required": true
                 }
@@ -65,7 +65,7 @@
             "response": [
                 {
                     "id": "square-areas-resp",
-                    "prompt": "Of the two marked squares, what proportion is the smaller square of the larger square by area?",
+                    "prompt": "Of the two marked squares, what percentage of the larger square is the smaller square by area?",
                     "type": "numerical",
                     "required": true
                 }
@@ -77,7 +77,7 @@
             "response": [
                 {
                     "id": "square-colors-resp",
-                    "prompt": "Consider the saturations of the two marked rectangles. What proportion of the greater saturation is the lesser saturation? No saturation and full saturation are shown to the left for your reference.",
+                    "prompt": "Consider the saturations of the two marked rectangles. What percentage of the greater saturation is the lesser saturation? (between 0-100) No saturation and full saturation are shown to the left for your reference.",
                     "type": "numerical",
                     "required": true
                 }
