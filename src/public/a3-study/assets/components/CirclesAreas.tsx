@@ -5,14 +5,12 @@ type BarplotProps = {
   data: number[];
 };
 
-export function CirclesAreas({
-  tags, width, height, data,
-}: BarplotProps) {
+export function CirclesAreas({ tags, width, height, data }: BarplotProps) {
   return (
     <svg
-      width={width * data.length}
+      width={120 * data.length}
       height={height}
-      style={{ display: 'inline-block' }}
+      style={{ display: "inline-block" }}
     >
       {data.map((d, i) => (
         <>
@@ -24,11 +22,9 @@ export function CirclesAreas({
             cy={height / 2}
             cx={height / 2 + i * (height / 2)}
           />
-          (
           {tags.indexOf(i) >= 0 && (
             <circle r={3} cy={height / 2} cx={height / 2 + i * (height / 2)} />
           )}
-          )
         </>
       ))}
     </svg>

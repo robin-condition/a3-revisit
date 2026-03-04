@@ -5,14 +5,12 @@ type BarplotProps = {
   data: number[];
 };
 
-export function SquareAreas({
-  tags, width, height, data,
-}: BarplotProps) {
+export function SquareAreas({ tags, width, height, data }: BarplotProps) {
   return (
     <svg
-      width={width * data.length}
+      width={120 * data.length}
       height={height}
-      style={{ display: 'inline-block' }}
+      style={{ display: "inline-block" }}
     >
       {data.map((d, i) => {
         const cx = height / 2 + i * (height / 2);
@@ -30,9 +28,7 @@ export function SquareAreas({
               x={cx - w / 2}
               y={cy - w / 2}
             />
-            (
-            {tags.indexOf(i) >= 0 && <circle r={3} cy={cy} cx={cx} />}
-            )
+            ({tags.indexOf(i) >= 0 && <circle r={3} cy={cy} cx={cx} />})
           </g>
         );
       })}
