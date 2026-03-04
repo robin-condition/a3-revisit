@@ -107,9 +107,9 @@
                 "tags": [1, 2]
             },
             "correctAnswer": [{
-                "answer": 0.5,
-                "acceptableHigh": 0.4,
-                "acceptableLow": 0.6,
+                "answer": 50,
+                "acceptableHigh": 60,
+                "acceptableLow": 40,
                 "id": "bar-chart-resp"
             }],
             "allowFailedTraining": false,
@@ -124,9 +124,9 @@
                 "tags": [1, 2]
             },
             "correctAnswer": [{
-                "answer": 0.5,
-                "acceptableHigh": 0.4,
-                "acceptableLow": 0.6,
+                "answer": 50,
+                "acceptableHigh": 60,
+                "acceptableLow": 40,
                 "id": "pie-areas-resp"
             }],
             "allowFailedTraining": false,
@@ -141,9 +141,9 @@
                 "tags": [1, 2]
             },
             "correctAnswer": [{
-                "answer": 0.5,
-                "acceptableHigh": 0.4,
-                "acceptableLow": 0.6,
+                "answer": 50,
+                "acceptableHigh": 60,
+                "acceptableLow": 40,
                 "id": "circle-areas-resp"
             }],
             "allowFailedTraining": false,
@@ -158,9 +158,9 @@
                 "tags": [1, 2]
             },
             "correctAnswer": [{
-                "answer": 0.5,
-                "acceptableHigh": 0.4,
-                "acceptableLow": 0.6,
+                "answer": 50,
+                "acceptableHigh": 60,
+                "acceptableLow": 40,
                 "id": "square-areas-resp"
             }],
             "allowFailedTraining": false,
@@ -175,9 +175,9 @@
                 "tags": [1, 2]
             },
             "correctAnswer": [{
-                "answer": 0.5,
-                "acceptableHigh": 0.4,
-                "acceptableLow": 0.6,
+                "answer": 50,
+                "acceptableHigh": 60,
+                "acceptableLow": 40,
                 "id": "square-colors-resp"
             }],
             "allowFailedTraining": false,
