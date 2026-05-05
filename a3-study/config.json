@@ -191,12 +191,6 @@
     "sequence": {
         "order": "fixed",
         "components": [
-            "introduction",
-            "training-bar-chart",
-            "training-square-color-chart",
-            "training-squarea-chart",
-            "training-circ-chart",
-            "training-pie-chart",
             "main-study-intro",
             {
                 "order": "random",
